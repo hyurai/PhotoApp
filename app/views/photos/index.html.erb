@@ -1,0 +1,10 @@
+<form action = "/photos" method = "post" enctype="multipart/form-data">
+  <input type="file" name="img" accept="image/*">
+  <input type = "submit" value = "投稿">
+</form>
+
+<% @photos.each do |photo|%>
+  <div style = "height:100px;width:100px;">
+    <img src = "<%= photo.img%>" style = "width:100%;height:100%;">
+  </div>
+<% end %>
